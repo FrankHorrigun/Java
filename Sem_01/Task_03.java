@@ -9,7 +9,8 @@ public class Task_03 {
         Scanner iScanner = new Scanner(System.in);
         System.out.print("Input number: ");
         int num = Integer.parseInt(iScanner.nextLine());
-        
+        iScanner.close();
+                
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr.length-i; j++) {
                 if (arr[j] == num) {
