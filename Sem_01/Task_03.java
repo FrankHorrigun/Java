@@ -11,16 +11,25 @@ public class Task_03 {
         int num = Integer.parseInt(iScanner.nextLine());
         iScanner.close();
                 
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr.length-i; j++) {
-                if (arr[j] == num) {
-                    arr[j]=arr[arr.length-1-i];
-                    arr[arr.length-1-i] = num;
-                }
-            }
-        }
-
+        // for (int i = 0; i < arr.length; i++) {
+        //     for (int j = 0; j < arr.length-i; j++) {
+        //         if (arr[j] == num) {
+        //             arr[j]=arr[arr.length-1-i];
+        //             arr[arr.length-1-i] = num;
+        //         }
+        //     }
+        // }
+        changeArray(arr, num);    
         System.out.println(Arrays.toString(arr));
+        
+    }
+    public static int[] changeArray(int[] arr, int num) {
+        int i, temp;
+        temp = 0;
+        for (i =0; i<arr.length;i++)
+            if (arr[i] !=num) arr[temp++]=arr[i];
+        for (i =temp; i<arr.length;i++) arr[i]=num;
+        return arr;
         
     }
 }
