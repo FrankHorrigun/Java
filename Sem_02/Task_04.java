@@ -1,9 +1,9 @@
 package Sem_02;
 
-import java.io.File;
+// import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.nio.charset.Charset;
+// import java.nio.charset.Charset;
 
 public class Task_04 {
     // Напишите метод, который составит строку,
@@ -28,11 +28,11 @@ public class Task_04 {
 
     public static void strWriter(String str) {
 
-        Charset append;
+        // Charset append;
         try (FileWriter fw = new FileWriter("1.txt", true);) {//если фалсе - то перезапишет, если тру - добавит
             fw.write(str);
             fw.append('\n'); // записывает только чар
-            fw.close();
+            // fw.close();
         } catch (IOException ex) {
             System.out.println(ex.getMessage());
         }
