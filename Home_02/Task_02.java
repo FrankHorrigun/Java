@@ -1,14 +1,15 @@
 package Home_02;
 
+import java.util.Random;
 import java.util.Scanner;
 
 // Реализуйте алгоритм сортировки пузырьком числового массива, результат после каждой итерации запишите в лог-файл.
 public class Task_02 {
     
-    Scanner iScanner = new Scanner(System.in);
+    Scanner sc = new Scanner(System.in);
     System.out.print("Input array length: ");
     int size = Integer.parseInt(iScanner.nextLine());
-    iScanner.close();
+    sc.close();
     Integer[] randArray = fillArray(size);
     System.out.println(randArray.toString);
 

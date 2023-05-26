@@ -5,8 +5,8 @@ import java.util.List;
 
 public class Task_02 {
     public static void main(String[] args) {
-        Task_01 pr = new Task_01();
-        int num = pr.promt();// чисто попробовал вызвать из другого класса. сделал копию походу
+        // Task_01 pr = new Task_01();
+        int num = Task_01.promt();// чисто попробовал вызвать из другого класса. сделал копию походу
         System.out.println(getPrimes(num));// сделал не до тысячи а до num
 
     }

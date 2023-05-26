@@ -35,7 +35,7 @@ public class Task_04 {
     public static int promt() {
         Scanner iScanner = new Scanner(System.in);
         int num = Integer.parseInt(iScanner.nextLine());
-        // iScanner.close();
+        iScanner.close();
         return num;
     }
 }
