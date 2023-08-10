@@ -92,7 +92,7 @@ public class Task_03_Calc_v2 {
 
     public static Character chrInput(String message, Scanner sc) {
         System.out.print(message);
-        Character chr = sc.next().charAt(0);
+        char chr = sc.next().charAt(0);
         return chr;
     }
 
