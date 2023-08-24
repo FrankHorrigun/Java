@@ -14,7 +14,7 @@ public class Task_02 {
     private static void sumOfNums(int[] arr) {
         int res = 0;
         for (int i = 0; i < arr.length - 1; i++) {
-            if (arr[i + 1] % 2 == 0 && arr[i] % 5 == 0) {
+            if (arr[i + 1] % 2 == 0 && arr[i] % 10 == 5) {
                 res += arr[i];
             }
         }
