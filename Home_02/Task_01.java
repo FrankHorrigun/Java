@@ -1,6 +1,8 @@
 package Home_02;
 // Дана строка sql-запроса:
 
+import java.util.Arrays;
+
 // select * from students where "
 // Сформируйте часть WHERE этого запроса, используя StringBuilder. Пример данных для фильтрации приведены ниже в виде json-строки. Если значение null, то параметр не должен попадать в запрос.
 
@@ -11,37 +13,36 @@ package Home_02;
 
 // String QUERY - начало SQL-запроса
 // String PARAMS - JSON с параметрами
+// Ожидаемый ответ:
+
+// select * from students where name='Ivanov' and country='Russia' and city='Moscow'
 
 public class Task_01 {
-    String list = "{\"name\": \"Ivanov\", \"country\": \"Russia\", \"city\": \"Moscow\", \"age\": \"null\"}"; 
-    System.out.println(list[0]); 
-    StringBuilder resultSelect = LineInList(list[0]);
-    System.out.println(resultSelect);
-  
-    public static StringBuilder LineInList(String line) {
-        String line1 = line.replace("{", "");
-        String line2 = line1.replace("}", "");
-        String line3 = line2.replaceAll("\"", "");
-        System.out.println(line3);
-        StringBuilder result = new StringBuilder("select * from students where ");
+    public static void main(String[] args) {
+        String  QUERY = "select * from students where ";
+        String PARAMS = "{\"name\":\"Ivanov\", \"country\":\"Russia\", \"city\":\"Moscow\", \"age\":\"null\"} ";
+        StringBuilder temp = new StringBuilder();
+        String str = PARAMS.replace("{", "").
+                replace("}", "").
+                replaceAll("\"", "").
+                replaceAll(",", ", and").
+                replaceAll(":", "='");
+        // System.out.println(str);
+        String[] elements = str.split(",");
+        System.out.println(Arrays.toString(elements));
+        temp.append(QUERY);
+        for (String element : elements) {
+            if (!element.contains("null")) {
+                temp.append(element).append("'");
+            }
+        }
+        // return temp;
+        System.out.println(temp.toString());
+        
 
-        String [] arrayData = line3.split(", ");
-        for (int i =0; i < arrayData.length; i++) {
-            String[] arrData = arrayData[i].split(":");
-            if(arrData[1].equals("null") == false) {
-                if (i != 0) {
-                    result.append(", ");
-                    result.append(arrData[0]);
-                    result.append(" = ");
-                    result.append(arrData[1]);
-                } else {
-                    result.append(arrData[0]);
-                    result.append(" = ");
-                    result.append(arrData[1]);
-              }
-          }
-          
-      }
-      return result;
     }
+
+    
+     
+    
 }

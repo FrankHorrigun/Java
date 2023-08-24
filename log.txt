@@ -1,0 +1,20 @@
+2023-08-24 09:16 User entered the first operand = 3
+2023-08-24 09:16 User entered the operation = +
+2023-08-24 09:16 User entered the second operand = 7
+2023-08-24 09:16 Result is 10
+
+2023-08-24 09:26 User entered the first operand = 3
+2023-08-24 09:26 User entered the operation = +
+2023-08-24 09:26 User entered the second operand = 7
+2023-08-24 09:26 Result is 10
+
+2023-08-24 09:52 User entered the first operand = 3
+2023-08-24 09:52 User entered the operation = +
+2023-08-24 09:52 User entered the second operand = 7
+2023-08-24 09:52 Result is 10
+
+2023-08-24 09:52 User entered the first operand = 3
+2023-08-24 09:52 User entered the operation = +
+2023-08-24 09:52 User entered the second operand = 7
+2023-08-24 09:52 Result is 10
+
